@@ -1,13 +1,12 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import Layout from '@/components/layout/Layout';
 import { blogPosts } from '@/data/blog-posts';
 
 const Blog = () => {
   useEffect(() => { document.title = 'Blog | Página Viva'; }, []);
 
   return (
-    <Layout>
+    <>
       <section className="bg-gradient-to-r from-brown to-burnt-orange py-16 text-white">
         <div className="container text-center">
           <h1 className="font-serif text-4xl font-bold mb-2">📝 Blog Página Viva</h1>
@@ -34,7 +33,7 @@ const Blog = () => {
           ))}
         </div>
       </div>
-    </Layout>
+    </>
   );
 };
 
