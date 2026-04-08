@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import Layout from '@/components/layout/Layout';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
 const sections = [
@@ -42,25 +41,23 @@ const FAQ = () => {
   useEffect(() => { document.title = 'FAQ — Perguntas Frequentes | Página Viva'; }, []);
 
   return (
-    <Layout>
-      <div className="container py-12 max-w-3xl">
-        <h1 className="font-serif text-3xl font-bold mb-2">Perguntas Frequentes</h1>
-        <p className="text-muted-foreground mb-8">Tire suas dúvidas sobre compras, entregas, trocas e mais.</p>
-        {sections.map((s) => (
-          <div key={s.title} className="mb-8">
-            <h2 className="font-serif text-xl font-semibold mb-3">{s.title}</h2>
-            <Accordion type="multiple">
-              {s.items.map((item, i) => (
-                <AccordionItem key={i} value={`${s.title}-${i}`}>
-                  <AccordionTrigger className="text-left">{item.q}</AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground">{item.a}</AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
-          </div>
-        ))}
-      </div>
-    </Layout>
+    <div className="container py-12 max-w-3xl">
+      <h1 className="font-serif text-3xl font-bold mb-2">Perguntas Frequentes</h1>
+      <p className="text-muted-foreground mb-8">Tire suas dúvidas sobre compras, entregas, trocas e mais.</p>
+      {sections.map((s) => (
+        <div key={s.title} className="mb-8">
+          <h2 className="font-serif text-xl font-semibold mb-3">{s.title}</h2>
+          <Accordion type="multiple">
+            {s.items.map((item, i) => (
+              <AccordionItem key={i} value={`${s.title}-${i}`}>
+                <AccordionTrigger className="text-left">{item.q}</AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">{item.a}</AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
+      ))}
+    </div>
   );
 };
 

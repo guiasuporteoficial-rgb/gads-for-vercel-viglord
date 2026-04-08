@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import Layout from '@/components/layout/Layout';
 import { BookOpen, Users, Star, Truck, Heart, Eye, Shield, Leaf, Award } from 'lucide-react';
 
 const stats = [
@@ -19,7 +18,7 @@ const Sobre = () => {
   useEffect(() => { document.title = 'Sobre a Livraria Página Viva | Nossa História'; }, []);
 
   return (
-    <Layout>
+    <>
       {/* Hero */}
       <section className="bg-gradient-to-r from-brown to-burnt-orange py-20 text-white">
         <div className="container text-center">
@@ -106,7 +105,7 @@ const Sobre = () => {
           <p>Parceria ativa com o projeto "Leitura pra Todos" em 47 comunidades.</p>
         </div>
       </section>
-    </Layout>
+    </>
   );
 };
 
