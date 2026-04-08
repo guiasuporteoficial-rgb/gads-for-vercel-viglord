@@ -3,8 +3,25 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import Index from "./pages/Index.tsx";
-import NotFound from "./pages/NotFound.tsx";
+import ScrollToTop from "@/components/ScrollToTop";
+import Index from "./pages/Index";
+import Loja from "./pages/Loja";
+import Categoria from "./pages/Categoria";
+import Livro from "./pages/Livro";
+import Carrinho from "./pages/Carrinho";
+import Checkout from "./pages/Checkout";
+import Confirmacao from "./pages/Confirmacao";
+import Busca from "./pages/Busca";
+import Favoritos from "./pages/Favoritos";
+import Sobre from "./pages/Sobre";
+import Contato from "./pages/Contato";
+import Privacidade from "./pages/Privacidade";
+import Termos from "./pages/Termos";
+import Trocas from "./pages/Trocas";
+import FAQ from "./pages/FAQ";
+import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
+import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
@@ -14,9 +31,25 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/loja" element={<Loja />} />
+          <Route path="/categoria/:slug" element={<Categoria />} />
+          <Route path="/livro/:slug" element={<Livro />} />
+          <Route path="/carrinho" element={<Carrinho />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/confirmacao" element={<Confirmacao />} />
+          <Route path="/busca" element={<Busca />} />
+          <Route path="/favoritos" element={<Favoritos />} />
+          <Route path="/sobre" element={<Sobre />} />
+          <Route path="/contato" element={<Contato />} />
+          <Route path="/privacidade" element={<Privacidade />} />
+          <Route path="/termos" element={<Termos />} />
+          <Route path="/trocas" element={<Trocas />} />
+          <Route path="/faq" element={<FAQ />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
