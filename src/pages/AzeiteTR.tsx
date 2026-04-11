@@ -1,4 +1,8 @@
 import { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
+import { BookOpen, Instagram, Facebook, Twitter, Youtube, Shield, Lock, Award, Heart, ShoppingBag, Search } from 'lucide-react';
+import { useStore } from '@/stores/useStore';
+import { categories } from '@/data/categories';
 
 const AzeiteTR = () => {
   const articleRef = useRef<HTMLDivElement>(null);
@@ -823,6 +827,228 @@ const AzeiteTR = () => {
         </section>
 
       </main>
+
+      {/* COMBINED HEADER + FOOTER */}
+      <footer className="azt-combined-footer">
+        <style>{`
+          .azt-combined-footer {
+            font-family: 'DM Sans', 'Inter', sans-serif;
+            margin-top: 0;
+          }
+          .azt-cf-nav {
+            background: var(--azt-bg-warm, #F5F0E8);
+            border-top: 1px solid var(--azt-border, #E0DACE);
+            border-bottom: 1px solid var(--azt-border, #E0DACE);
+          }
+          .azt-cf-nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+          }
+          .azt-cf-nav-inner a {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--azt-text-secondary, #5A5A52);
+            text-decoration: none;
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            transition: background 0.2s, color 0.2s;
+          }
+          .azt-cf-nav-inner a:hover {
+            background: rgba(0,0,0,0.05);
+            color: var(--azt-text-primary, #2C2C28);
+          }
+          .azt-cf-main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr 1fr 1.2fr;
+            gap: 2.5rem;
+          }
+          .azt-cf-main h4 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--azt-text-primary, #2C2C28);
+            margin-bottom: 1rem;
+          }
+          .azt-cf-main a, .azt-cf-main span.azt-cf-link {
+            display: block;
+            font-size: 0.82rem;
+            color: var(--azt-text-secondary, #5A5A52);
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            transition: color 0.2s;
+            cursor: pointer;
+          }
+          .azt-cf-main a:hover, .azt-cf-main span.azt-cf-link:hover {
+            color: var(--azt-olive-deep, #3D4A2A);
+          }
+          .azt-cf-logo-section p {
+            font-size: 0.82rem;
+            line-height: 1.65;
+            color: var(--azt-text-caption, #7A7A70);
+            margin-bottom: 1rem;
+          }
+          .azt-cf-socials {
+            display: flex;
+            gap: 0.75rem;
+          }
+          .azt-cf-socials svg {
+            width: 18px;
+            height: 18px;
+            color: var(--azt-text-caption, #7A7A70);
+            cursor: pointer;
+            transition: color 0.2s;
+          }
+          .azt-cf-socials svg:hover {
+            color: var(--azt-olive-deep, #3D4A2A);
+          }
+          .azt-cf-payment {
+            display: flex;
+            gap: 0.4rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+          }
+          .azt-cf-payment span {
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--azt-text-secondary, #5A5A52);
+            border: 1px solid var(--azt-border, #E0DACE);
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+          }
+          .azt-cf-contact-info {
+            font-size: 0.82rem;
+            color: var(--azt-text-caption, #7A7A70);
+            line-height: 1.7;
+          }
+          .azt-cf-badges {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+          }
+          .azt-cf-badges > div {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            font-size: 0.72rem;
+            color: var(--azt-text-caption, #7A7A70);
+          }
+          .azt-cf-badges svg {
+            width: 14px;
+            height: 14px;
+          }
+          .azt-cf-bottom {
+            background: var(--azt-olive-deep, #3D4A2A);
+            color: rgba(245,240,232,0.7);
+            text-align: center;
+            padding: 0.85rem 2rem;
+            font-size: 0.72rem;
+            letter-spacing: 0.02em;
+          }
+          @media (max-width: 768px) {
+            .azt-cf-main {
+              grid-template-columns: 1fr 1fr;
+              gap: 2rem;
+              padding: 2rem 1.5rem;
+            }
+            .azt-cf-nav-inner {
+              padding: 0.8rem 1rem;
+            }
+          }
+          @media (max-width: 480px) {
+            .azt-cf-main {
+              grid-template-columns: 1fr;
+              gap: 1.5rem;
+            }
+          }
+        `}</style>
+
+        {/* Navigation Bar */}
+        <div className="azt-cf-nav">
+          <div className="azt-cf-nav-inner">
+            <Link to="/">Início</Link>
+            <Link to="/loja">Loja</Link>
+            <Link to="/loja?sort=bestsellers">Mais Vendidos</Link>
+            <Link to="/loja?sort=newest">Lançamentos</Link>
+            <Link to="/loja?sort=deals">Ofertas</Link>
+            <Link to="/blog">Blog</Link>
+            <Link to="/contato">Contato</Link>
+          </div>
+        </div>
+
+        {/* Main Footer Grid */}
+        <div className="azt-cf-main">
+          {/* Col 1 - Logo */}
+          <div className="azt-cf-logo-section">
+            <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.75rem', textDecoration: 'none' }}>
+              <BookOpen style={{ width: 22, height: 22, color: 'var(--azt-olive-deep, #3D4A2A)' }} />
+              <span style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: '1.05rem', fontWeight: 700, color: 'var(--azt-text-primary, #2C2C28)' }}>DROPIX EDITORA</span>
+            </Link>
+            <p>Sua editora online com os melhores títulos, preços e atendimento. Leitura transforma vidas.</p>
+            <div className="azt-cf-socials">
+              <Instagram />
+              <Facebook />
+              <Twitter />
+              <Youtube />
+            </div>
+          </div>
+
+          {/* Col 2 - Institucional */}
+          <div>
+            <h4>Institucional</h4>
+            <Link to="/sobre">Sobre Nós</Link>
+            <Link to="/blog">Blog</Link>
+            <Link to="/faq">FAQ</Link>
+            <Link to="/contato">Contato</Link>
+            <span className="azt-cf-link">Trabalhe Conosco</span>
+          </div>
+
+          {/* Col 3 - Ajuda */}
+          <div>
+            <h4>Ajuda</h4>
+            <Link to="/privacidade">Política de Privacidade</Link>
+            <Link to="/termos">Termos de Uso</Link>
+            <Link to="/trocas">Trocas e Devoluções</Link>
+            <Link to="/faq">Como Comprar</Link>
+            <span className="azt-cf-link">Rastrear Pedido</span>
+          </div>
+
+          {/* Col 4 - Pagamento & Contato */}
+          <div>
+            <h4>Pagamento & Contato</h4>
+            <div className="azt-cf-payment">
+              <span>Visa</span>
+              <span>Master</span>
+              <span>Elo</span>
+              <span>PIX</span>
+              <span>Boleto</span>
+            </div>
+            <div className="azt-cf-contact-info">
+              Atendimento: seg-sex 8h às 18h<br />
+              contato@dropixeditora.com.br<br />
+              (11) 4002-8922
+            </div>
+            <div className="azt-cf-badges">
+              <div><Shield /> Site Seguro</div>
+              <div><Award /> Garantido</div>
+              <div><Lock /> SSL</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="azt-cf-bottom">
+          © 2026 DROPIX EDITORA. Todos os direitos reservados. CNPJ: 12.345.678/0001-90
+        </div>
+      </footer>
     </div>
   );
 };
