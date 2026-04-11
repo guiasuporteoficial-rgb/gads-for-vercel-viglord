@@ -11,7 +11,7 @@ const AzeiteTR = () => {
   };
 
   return (
-    <div ref={articleRef} className="azt-page">
+    <div className="azt-page">
       <style>{`
         .azt-page {
           --azt-bg: #FAFAF5;
