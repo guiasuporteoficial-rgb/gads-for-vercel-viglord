@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom';
 import { blogPosts } from '@/data/blog-posts';
 
 const Blog = () => {
-  useEffect(() => { document.title = 'Blog | Página Viva'; }, []);
+  useEffect(() => { document.title = 'Blog | DROPIX EDITORA'; }, []);
 
   return (
     <>
       <section className="bg-gradient-to-r from-brown to-burnt-orange py-16 text-white">
         <div className="container text-center">
-          <h1 className="font-serif text-4xl font-bold mb-2">📝 Blog Página Viva</h1>
+          <h1 className="font-serif text-4xl font-bold mb-2">📝 Blog DROPIX EDITORA</h1>
           <p className="opacity-90">Dicas, Novidades e Cultura Literária</p>
         </div>
       </section>

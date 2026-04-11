@@ -14,7 +14,7 @@ import { toast } from '@/components/ui/sonner';
 const slides = [
   { bg: 'linear-gradient(135deg, #3E2723, #E65100)', title: 'Descubra Mundos Infinitos', sub: 'Mais de 5.000 títulos com até 40% de desconto. Sua próxima grande leitura está aqui.', cta: 'Explorar Loja →', to: '/loja' },
   { bg: 'linear-gradient(135deg, #5D4037, #795548)', title: 'Lançamentos da Semana', sub: 'Os títulos mais aguardados acabaram de chegar. Garanta o seu antes que esgote.', cta: 'Ver Lançamentos →', to: '/loja?sort=newest' },
-  { bg: 'linear-gradient(135deg, #E65100, #FFB300)', title: 'Clube Página Viva', sub: 'Assine e receba 1 livro surpresa por mês + frete grátis em todas as compras.', cta: 'Conhecer o Clube →', to: '/sobre' },
+  { bg: 'linear-gradient(135deg, #E65100, #FFB300)', title: 'Clube DROPIX EDITORA', sub: 'Assine e receba 1 livro surpresa por mês + frete grátis em todas as compras.', cta: 'Conhecer o Clube →', to: '/sobre' },
   { bg: 'linear-gradient(135deg, #1B5E20, #4CAF50)', title: 'Semana do Leitor', sub: 'Livros selecionados a partir de R$ 9,90. Promoção por tempo limitado!', cta: 'Aproveitar Ofertas →', to: '/loja?sort=deals' },
 ];
 

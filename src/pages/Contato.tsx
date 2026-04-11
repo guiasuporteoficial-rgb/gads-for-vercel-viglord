@@ -7,7 +7,7 @@ import { Mail, Phone, Clock, MapPin, Instagram, Facebook, Twitter, Youtube } fro
 import { toast } from 'sonner';
 
 const Contato = () => {
-  useEffect(() => { document.title = 'Contato | Livraria Página Viva'; }, []);
+  useEffect(() => { document.title = 'Contato | DROPIX EDITORA'; }, []);
   const [sent, setSent] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -49,7 +49,7 @@ const Contato = () => {
           )}
         </div>
         <div className="space-y-6">
-          <div className="flex items-start gap-3"><Mail className="h-5 w-5 text-burnt-orange mt-0.5" /><div><p className="font-semibold text-sm">Email</p><p className="text-sm text-muted-foreground">contato@paginaviva.com.br</p></div></div>
+          <div className="flex items-start gap-3"><Mail className="h-5 w-5 text-burnt-orange mt-0.5" /><div><p className="font-semibold text-sm">Email</p><p className="text-sm text-muted-foreground"><div className="flex items-start gap-3"><Mail className="h-5 w-5 text-burnt-orange mt-0.5" /><div><p className="font-semibold text-sm">Email</p><p className="text-sm text-muted-foreground">contato@dropixeditora.com.br</p></div></div></p></div></div>
           <div className="flex items-start gap-3"><Phone className="h-5 w-5 text-burnt-orange mt-0.5" /><div><p className="font-semibold text-sm">Telefone</p><p className="text-sm text-muted-foreground">(11) 4002-8922</p></div></div>
           <div className="flex items-start gap-3"><Clock className="h-5 w-5 text-burnt-orange mt-0.5" /><div><p className="font-semibold text-sm">Horário</p><p className="text-sm text-muted-foreground">Seg-Sex: 8h às 18h | Sáb: 9h às 13h</p></div></div>
           <div className="flex items-start gap-3"><MapPin className="h-5 w-5 text-burnt-orange mt-0.5" /><div><p className="font-semibold text-sm">Endereço</p><p className="text-sm text-muted-foreground">Rua dos Pinheiros, 847 — Pinheiros, São Paulo/SP — CEP 05422-012</p></div></div>

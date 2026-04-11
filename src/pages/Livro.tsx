@@ -42,7 +42,7 @@ const Livro = () => {
     { name: 'Pedro Lima', date: '05/03/2026', rating: 5, text: 'Um dos melhores livros que li nos últimos anos. A escrita é envolvente e os personagens são memoráveis.' },
     { name: 'Mariana Silva', date: '28/02/2026', rating: 4, text: 'Muito bom! Achei o final um pouco apressado, mas no geral é uma leitura excelente.' },
     { name: 'Lucas Oliveira', date: '20/02/2026', rating: 5, text: 'Comprei para dar de presente e acabei lendo primeiro. Não me arrependo!' },
-    { name: 'Carla Santos', date: '15/02/2026', rating: 4, text: 'Ótima qualidade de impressão e a história é maravilhosa. Entrega rápida da Página Viva.' },
+    { name: 'Carla Santos', date: '15/02/2026', rating: 4, text: 'Ótima qualidade de impressão e a história é maravilhosa. Entrega rápida da DROPIX EDITORA.' },
   ];
 
   return (
