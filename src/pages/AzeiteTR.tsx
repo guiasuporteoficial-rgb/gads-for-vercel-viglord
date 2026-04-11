@@ -1,4 +1,3 @@
-import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import azeiteApresentacao from '@/assets/azeite-apresentacao.png';
 import { BookOpen, Instagram, Facebook, Twitter, Youtube, Shield, Lock, Award, Heart, ShoppingBag, Search } from 'lucide-react';
@@ -6,26 +5,13 @@ import { useStore } from '@/stores/useStore';
 import { categories } from '@/data/categories';
 
 const AzeiteTR = () => {
-  const articleRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (!articleRef.current) return;
-    const els = articleRef.current.querySelectorAll('.azt-reveal');
-    const observer = new IntersectionObserver(
-      (entries) => entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add('azt-visible'); }),
-      { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
-    );
-    els.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
-  }, []);
-
   const scrollTo = (id: string) => {
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
   return (
-    <div ref={articleRef} className="azt-page">
+    <div className="azt-page">
       <style>{`
         .azt-page {
           --azt-bg: #FAFAF5;
@@ -87,7 +73,6 @@ const AzeiteTR = () => {
           padding: 0.45rem 1.4rem;
           border-radius: 100px;
           margin-bottom: 2.5rem;
-          animation: aztFadeDown 1s ease-out 0.2s both;
         }
         .azt-hero h1 {
           font-family: 'Playfair Display', Georgia, serif;
@@ -97,7 +82,6 @@ const AzeiteTR = () => {
           color: #F5F0E8;
           letter-spacing: -0.02em;
           margin-bottom: 1.8rem;
-          animation: aztFadeUp 1.1s ease-out 0.4s both;
         }
         .azt-hero h1 em {
           font-style: italic;
@@ -110,14 +94,12 @@ const AzeiteTR = () => {
           color: rgba(245,240,232,0.72);
           max-width: 600px;
           margin: 0 auto 3rem;
-          animation: aztFadeUp 1.1s ease-out 0.6s both;
         }
         .azt-hero-meta {
           font-family: 'DM Sans', sans-serif;
           font-size: 0.75rem;
           color: rgba(245,240,232,0.4);
           letter-spacing: 0.04em;
-          animation: aztFadeUp 1s ease-out 0.8s both;
         }
         .azt-hero-scroll {
           position: absolute;
@@ -134,13 +116,11 @@ const AzeiteTR = () => {
           letter-spacing: 0.15em;
           text-transform: uppercase;
           cursor: pointer;
-          animation: aztFadeUp 1s ease-out 1s both;
         }
         .azt-hero-scroll .azt-line {
           width: 1px;
           height: 40px;
           background: linear-gradient(to bottom, rgba(212,168,67,0.5), transparent);
-          animation: aztScrollPulse 2s ease-in-out infinite;
         }
 
         .azt-article-wrapper {
@@ -437,26 +417,12 @@ const AzeiteTR = () => {
         }
 
         .azt-reveal {
-          opacity: 0;
-          transform: translateY(18px);
-          transition: opacity 0.7s ease, transform 0.7s ease;
+          opacity: 1;
+          transform: none;
         }
         .azt-visible {
           opacity: 1;
-          transform: translateY(0);
-        }
-
-        @keyframes aztFadeUp {
-          from { opacity: 0; transform: translateY(20px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes aztFadeDown {
-          from { opacity: 0; transform: translateY(-10px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes aztScrollPulse {
-          0%, 100% { opacity: 0.3; transform: scaleY(1); }
-          50% { opacity: 0.7; transform: scaleY(1.2); }
+          transform: none;
         }
 
         @media (max-width: 768px) {
@@ -486,7 +452,6 @@ const AzeiteTR = () => {
           text-decoration: none;
           transition: all 0.3s ease;
           box-shadow: 0 8px 30px rgba(184,134,11,0.3);
-          animation: aztFadeUp 1.1s ease-out 0.8s both;
         }
         .azt-cta-btn:hover {
           transform: translateY(-2px);
