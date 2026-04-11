@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const TRACKING_KEYS = [
   'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content',
@@ -10,13 +10,14 @@ const TRACKING_KEYS = [
 const STORAGE_KEY = 'tracking_params';
 
 export function useTrackingParams() {
-  const { search } = useLocation();
+  const location = useLocation();
+  const navigate = useNavigate();
 
   // Capture tracking params from URL on arrival
   useEffect(() => {
-    if (!search) return;
+    if (!location.search) return;
 
-    const params = new URLSearchParams(search);
+    const params = new URLSearchParams(location.search);
     const existing = getTrackingParams();
     let updated = false;
 
@@ -31,9 +32,32 @@ export function useTrackingParams() {
     if (updated) {
       sessionStorage.setItem(STORAGE_KEY, JSON.stringify(existing));
     }
-  }, [search]);
+  }, [location.search]);
 
-  // Intercept clicks on ALL links and append tracking params to URL
+  // After every route change, re-inject saved tracking params into the URL
+  useEffect(() => {
+    const saved = getTrackingParams();
+    if (Object.keys(saved).length === 0) return;
+
+    const currentParams = new URLSearchParams(location.search);
+    let needsUpdate = false;
+
+    Object.entries(saved).forEach(([key, value]) => {
+      if (!currentParams.has(key)) {
+        currentParams.set(key, value);
+        needsUpdate = true;
+      }
+    });
+
+    if (needsUpdate) {
+      const newSearch = currentParams.toString();
+      const newUrl = location.pathname + '?' + newSearch + (location.hash || '');
+      // Use replaceState to avoid polluting browser history
+      window.history.replaceState(null, '', newUrl);
+    }
+  }, [location.pathname]);
+
+  // Intercept clicks on external links and append tracking params
   useEffect(() => {
     const handler = (e: MouseEvent) => {
       const anchor = (e.target as HTMLElement).closest('a');
@@ -42,25 +66,21 @@ export function useTrackingParams() {
       const href = anchor.getAttribute('href');
       if (!href) return;
 
-      const params = getTrackingParams();
-      if (Object.keys(params).length === 0) return;
-
       try {
         const url = new URL(href, window.location.origin);
+        // Only decorate external links
+        if (url.origin === window.location.origin) return;
 
-        // Append tracking params
+        const params = getTrackingParams();
+        if (Object.keys(params).length === 0) return;
+
         Object.entries(params).forEach(([key, value]) => {
           if (!url.searchParams.has(key)) {
             url.searchParams.set(key, value);
           }
         });
 
-        // For internal links, update href so React Router picks up the params
-        if (url.origin === window.location.origin) {
-          anchor.setAttribute('href', url.pathname + url.search + url.hash);
-        } else {
-          anchor.setAttribute('href', url.toString());
-        }
+        anchor.setAttribute('href', url.toString());
       } catch {
         // Not a valid URL, skip
       }
