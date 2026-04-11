@@ -122,7 +122,7 @@ A época pede edições especiais, box de coleções e livros de mesa (coffee ta
 Livros de desenvolvimento pessoal, empreendedorismo e carreira são presentes que inspiram. Edições com dedicatória pessoal tornam o presente inesquecível.
 
 **Amigo Secreto**
-Com orçamento limitado, aposte em livros de bolso, poesia ou contos. Na DROPIX EDITORA, temos opções incríveis a partir de R$ 19,90.\`
+Com orçamento limitado, aposte em livros de bolso, poesia ou contos. Na DROPIX EDITORA, temos opções incríveis a partir de R$ 19,90.`
   },
   {
     id: '5',
