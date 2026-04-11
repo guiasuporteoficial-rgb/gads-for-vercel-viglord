@@ -8,7 +8,7 @@ const BlogPost = () => {
   const post = blogPosts.find((p) => p.slug === slug);
 
   useEffect(() => {
-    document.title = post ? `${post.title} | Blog Página Viva` : 'Post não encontrado';
+    document.title = post ? `${post.title} | Blog DROPIX EDITORA` : 'Post não encontrado';
   }, [post]);
 
   if (!post) {

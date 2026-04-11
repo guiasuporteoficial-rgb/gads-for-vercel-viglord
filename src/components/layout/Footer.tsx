@@ -9,9 +9,9 @@ const Footer = () => (
         <div>
           <Link to="/" className="flex items-center gap-2 mb-3">
             <BookOpen className="h-6 w-6 text-primary" />
-            <span className="font-serif text-lg font-bold">Página Viva</span>
+            <span className="font-serif text-lg font-bold">DROPIX EDITORA</span>
           </Link>
-          <p className="text-sm text-muted-foreground mb-4">Sua livraria online com os melhores títulos, preços e atendimento. Leitura transforma vidas.</p>
+          <p className="text-sm text-muted-foreground mb-4">Sua editora online com os melhores títulos, preços e atendimento. Leitura transforma vidas.</p>
           <div className="flex gap-3">
             <Instagram className="h-5 w-5 text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
             <Facebook className="h-5 w-5 text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
@@ -52,7 +52,7 @@ const Footer = () => (
             <span className="rounded border px-2 py-1">Boleto</span>
           </div>
           <p className="text-sm text-muted-foreground">Atendimento: seg-sex 8h às 18h</p>
-          <p className="text-sm text-muted-foreground">contato@paginaviva.com.br</p>
+          <p className="text-sm text-muted-foreground">contato@dropixeditora.com.br</p>
           <p className="text-sm text-muted-foreground">(11) 4002-8922</p>
           <div className="mt-4 flex gap-3">
             <div className="flex items-center gap-1 text-xs text-muted-foreground"><Shield className="h-4 w-4" /> Site Seguro</div>
@@ -64,7 +64,7 @@ const Footer = () => (
     </div>
     <div className="bg-brown text-brown-foreground">
       <div className="container py-3 text-center text-xs">
-        © 2026 Livraria Página Viva. Todos os direitos reservados. CNPJ: 12.345.678/0001-90
+        © 2026 DROPIX EDITORA. Todos os direitos reservados. CNPJ: 12.345.678/0001-90
       </div>
     </div>
   </footer>

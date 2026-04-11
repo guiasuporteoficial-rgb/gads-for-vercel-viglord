@@ -7,7 +7,7 @@ const sections = [
     items: [
       { q: 'Como faço para comprar?', a: 'Escolha o livro desejado, clique em "Adicionar ao Carrinho", vá ao carrinho, confira os itens, preencha seus dados e finalize o pagamento. Você receberá um email de confirmação.' },
       { q: 'Quais formas de pagamento vocês aceitam?', a: 'Cartão de crédito (Visa, Mastercard, Elo) com parcelamento em até 6x sem juros, PIX (com 5% de desconto) e boleto bancário (vencimento em 3 dias).' },
-      { q: 'É seguro comprar na Página Viva?', a: 'Sim! Nosso site possui certificado SSL, todos os dados são criptografados e trabalhamos com gateways de pagamento certificados.' },
+      { q: 'É seguro comprar na DROPIX EDITORA?', a: 'Sim! Nosso site possui certificado SSL, todos os dados são criptografados e trabalhamos com gateways de pagamento certificados.' },
       { q: 'Posso alterar meu pedido após a compra?', a: 'Você pode solicitar alteração em até 2 horas após a compra, desde que o pedido ainda não tenha sido enviado. Entre em contato pelo nosso SAC.' },
       { q: 'Como usar um cupom de desconto?', a: 'No carrinho de compras, insira o código do cupom no campo "Cupom de Desconto" e clique em "Aplicar". O desconto será exibido no resumo do pedido.' },
     ],
@@ -32,13 +32,13 @@ const sections = [
     title: '👤 Conta e Dados',
     items: [
       { q: 'Preciso ter uma conta para comprar?', a: 'Não, você pode comprar como visitante. Mas com uma conta, você acompanha pedidos, salva favoritos e tem um checkout mais rápido.' },
-      { q: 'Como excluo minha conta?', a: 'Envie um email para privacidade@paginaviva.com.br solicitando a exclusão. Processaremos em até 10 dias úteis conforme a LGPD.' },
+      { q: 'Como excluo minha conta?', a: 'Envie um email para privacidade@dropixeditora.com.br solicitando a exclusão. Processaremos em até 10 dias úteis conforme a LGPD.' },
     ],
   },
 ];
 
 const FAQ = () => {
-  useEffect(() => { document.title = 'FAQ — Perguntas Frequentes | Página Viva'; }, []);
+  useEffect(() => { document.title = 'FAQ — Perguntas Frequentes | DROPIX EDITORA'; }, []);
 
   return (
     <div className="container py-12 max-w-3xl">

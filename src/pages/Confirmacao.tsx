@@ -10,7 +10,7 @@ const Confirmacao = () => {
     <div className="container py-16 text-center">
       <CheckCircle className="mx-auto h-20 w-20 text-green-500 mb-4" />
       <h1 className="font-serif text-3xl font-bold mb-2">Pedido Realizado com Sucesso! 🎉</h1>
-      <p className="text-lg text-muted-foreground mb-1">Número do pedido: <strong>#PV-2026-00001</strong></p>
+      <p className="text-lg text-muted-foreground mb-1">Número do pedido: <strong>#DX-2026-00001</strong></p>
       <p className="text-muted-foreground mb-1">Você receberá um email de confirmação em breve.</p>
       <p className="text-muted-foreground mb-8">Prazo estimado de entrega: 5-7 dias úteis</p>
       <div className="flex justify-center gap-4">

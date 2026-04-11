@@ -76,7 +76,7 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 flex-shrink-0">
             <BookOpen className="h-7 w-7 text-primary" />
-            <span className="font-serif text-xl font-bold text-foreground hidden sm:inline">Página Viva</span>
+            <span className="font-serif text-xl font-bold text-foreground hidden sm:inline">DROPIX EDITORA</span>
           </Link>
 
           {/* Search */}

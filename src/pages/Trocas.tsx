@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 
 const Trocas = () => {
-  useEffect(() => { document.title = 'Trocas e Devoluções | Página Viva'; }, []);
+  useEffect(() => { document.title = 'Trocas e Devoluções | DROPIX EDITORA'; }, []);
 
   return (
     <div className="container py-12 max-w-3xl prose prose-sm">
@@ -36,7 +36,7 @@ const Trocas = () => {
         <li>Selecione o pedido e clique em "Solicitar Troca/Devolução"</li>
         <li>Escolha o motivo e descreva o problema</li>
         <li>Aguarde nosso email com as instruções de envio (em até 24h úteis)</li>
-        <li>Envie o produto (frete por conta da Página Viva em caso de defeito)</li>
+        <li>Envie o produto (frete por conta da DROPIX EDITORA em caso de defeito)</li>
       </ol>
 
       <h2>Reembolso</h2>
@@ -47,7 +47,7 @@ const Trocas = () => {
       </ul>
 
       <h2>Contato</h2>
-      <p>trocas@paginaviva.com.br | (11) 4002-8922</p>
+      <p>trocas@dropixeditora.com.br | (11) 4002-8922</p>
     </div>
   );
 };

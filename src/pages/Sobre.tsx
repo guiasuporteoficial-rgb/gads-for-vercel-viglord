@@ -15,7 +15,7 @@ const team = [
 ];
 
 const Sobre = () => {
-  useEffect(() => { document.title = 'Sobre a Livraria Página Viva | Nossa História'; }, []);
+  useEffect(() => { document.title = 'Sobre a DROPIX EDITORA | Nossa História'; }, []);
 
   return (
     <>
@@ -31,7 +31,7 @@ const Sobre = () => {
       <section className="container py-16">
         <h2 className="font-serif text-3xl font-bold mb-6">Quem Somos</h2>
         <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
-          <p>A Livraria Página Viva nasceu em 2018 como um pequeno sebo em Pinheiros, São Paulo. Fundada por dois apaixonados por literatura — a professora de literatura Maria Helena Rocha e o designer gráfico Eduardo Vasconcelos — nosso sonho era criar mais do que uma livraria: queríamos criar um ponto de encontro entre pessoas e histórias.</p>
+          <p>A DROPIX EDITORA nasceu em 2018 como um pequeno sebo em Pinheiros, São Paulo. Fundada por dois apaixonados por literatura — a professora de literatura Maria Helena Rocha e o designer gráfico Eduardo Vasconcelos — nosso sonho era criar mais do que uma editora: queríamos criar um ponto de encontro entre pessoas e histórias.</p>
           <p>Em 2020, quando o mundo parou, nós aceleramos. Levamos nossa curadoria cuidadosa para o digital, alcançando leitores em todos os cantos do Brasil. Hoje, somos uma das livrarias online mais bem avaliadas do país, com mais de 5.000 títulos, entregas para todo o Brasil e uma comunidade de mais de 100.000 leitores.</p>
           <p>Mas uma coisa nunca mudou: cada livro em nosso catálogo é lido, avaliado e aprovado por nossa equipe de curadores. Não vendemos qualquer livro — vendemos livros que importam.</p>
         </div>
