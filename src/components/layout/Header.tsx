@@ -1,4 +1,4 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { BookOpen, Heart, Menu, Search, ShoppingBag, X } from 'lucide-react';
 import { useStore } from '@/stores/useStore';
 import { Button } from '@/components/ui/button';
@@ -9,6 +9,8 @@ import { useState } from 'react';
 
 const Header = () => {
   const navigate = useNavigate();
+  const { pathname } = useLocation();
+  const isBottom = pathname === '/azeitetr';
   const { cartCount, favorites, searchTerm, setSearchTerm, cart } = useStore();
   const count = cartCount();
   const favCount = favorites.length;
@@ -33,7 +35,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="sticky top-0 z-50">
+    <header className={isBottom ? 'z-50' : 'sticky top-0 z-50'}>
       {/* Top Bar */}
       <div className="bg-brown text-brown-foreground">
         <div className="container flex items-center justify-between py-1.5 text-xs">
