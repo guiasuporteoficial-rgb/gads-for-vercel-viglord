@@ -23,6 +23,7 @@ import FAQ from "./pages/FAQ";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import AzeiteTR from "./pages/AzeiteTR";
+import Apresentacao from "./pages/Apresentacao";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -54,6 +55,7 @@ const App = () => (
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/azeitetr" element={<AzeiteTR />} />
+            <Route path="/apresentacao" element={<Apresentacao />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>
