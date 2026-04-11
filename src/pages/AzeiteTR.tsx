@@ -493,6 +493,31 @@ const AzeiteTR = () => {
       {/* ARTICLE */}
       <main id="azt-conteudo">
 
+        {/* REFERENCES - moved above intro */}
+        <section className="azt-article-wrapper azt-reveal" style={{ paddingTop: '4rem', paddingBottom: '1rem' }}>
+          <h2 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: 'clamp(1.55rem, 3vw, 1.85rem)', fontWeight: 600, lineHeight: 1.3, color: 'var(--azt-olive-deep)', letterSpacing: '-0.015em', marginBottom: '0.5rem' }}>Referências Bibliográficas e Evidências Acadêmicas</h2>
+        </section>
+        <section className="azt-references azt-article-wrapper azt-reveal">
+          <h3>Referências Científicas Citadas</h3>
+          <ul className="azt-ref-list">
+            <li><span className="azt-ref-num">[1]</span> Moreno-Luna R. et al. — "Olive Oil Polyphenols Decrease Blood Pressure and Improve Endothelial Function in Young Women with Mild Hypertension." American Journal of Hypertension, Vol. 25(12), 2012.</li>
+            <li><span className="azt-ref-num">[2]</span> Beauchamp G.K. et al. — "Phytochemistry: Ibuprofen-like activity in extra-virgin olive oil." Nature, Vol. 437, Set. 2005.</li>
+            <li><span className="azt-ref-num">[3]</span> Bozzetto L. et al. — "Extra-Virgin Olive Oil Reduces Glycemic Response to a High–Glycemic Index Meal in Patients With Type 1 Diabetes." Diabetes Care, Vol. 39(4), 2016.</li>
+            <li><span className="azt-ref-num">[4]</span> Abuznait A.H. et al. — "Olive-oil-derived oleocanthal enhances β-amyloid clearance as a potential neuroprotective mechanism against Alzheimer's disease." ACS Chemical Neuroscience, 2013.</li>
+            <li><span className="azt-ref-num">[5]</span> Millman J.F. et al. — "Extra-virgin olive oil and the gut-brain axis: influence on gut microbiota, mucosal immunity, and cardiometabolic and cognitive health." Nutrition Reviews, Vol. 79(12), 2021.</li>
+            <li><span className="azt-ref-num">[6]</span> Filip R. et al. — "Twelve-month consumption of a polyphenol extract from olive in a double blind, randomized trial increases serum total osteocalcin levels." J. Nutrition, Health &amp; Aging, 2015.</li>
+            <li><span className="azt-ref-num">[7]</span> Storniolo C.E. et al. — "Polyphenol fraction of extra virgin olive oil protects against endothelial dysfunction induced by high glucose and free fatty acids." Redox Biology, Vol. 2, 2014.</li>
+            <li><span className="azt-ref-num">[8]</span> Fernández-Real J.M. et al. — "A Mediterranean Diet Enriched with Olive Oil Is Associated with Higher Serum Total Osteocalcin Levels in Elderly Men." J. Clin. Endocrinol. Metab., 2012.</li>
+            <li><span className="azt-ref-num">[9]</span> Alkhalifa A.E. et al. — "Extra-Virgin Olive Oil in Alzheimer's Disease: A Comprehensive Review." Int. J. Mol. Sci., 2024.</li>
+            <li><span className="azt-ref-num">[10]</span> Luisi M.L.E. et al. — "Post-prandial effects of high-polyphenolic extra virgin olive oil on endothelial function in adults at risk for type 2 diabetes." Int. J. Cardiol., 2021.</li>
+            <li><span className="azt-ref-num">[11]</span> Jiménez-Sánchez A. et al. — "Extra virgin olive oil diet intervention improves insulin resistance and islet performance in diet-induced diabetes in mice." Scientific Reports, 2019.</li>
+            <li><span className="azt-ref-num">[12]</span> Oliveira A. et al. — "Unraveling the Extra Virgin Olive Oil Effect on Inflammation and on Gut and Saliva Microbiota." Biomolecules, 2025.</li>
+            <li><span className="azt-ref-num">[13]</span> Andújar-Tenorio N. et al. — "Intestinal microbiota modulation at the strain level by the olive oil polyphenols in the diet." Frontiers in Nutrition, 2023.</li>
+            <li><span className="azt-ref-num">[14]</span> García-Gavilán J.F. et al. — "Extra virgin olive oil consumption reduces the risk of osteoporotic fractures in the PREDIMED trial." Clinical Nutrition, 2018.</li>
+            <li><span className="azt-ref-num">[15]</span> Revisão Sistemática — "Exploring the Benefits of Extra Virgin Olive Oil on Cardiovascular Health Enhancement and Disease Prevention." PMC, 2025.</li>
+          </ul>
+        </section>
+
         {/* INTRO */}
         <section className="azt-intro azt-article-wrapper azt-reveal">
           <p className="azt-lead">
@@ -804,27 +829,6 @@ const AzeiteTR = () => {
           </div>
         </section>
 
-        {/* REFERENCES */}
-        <section className="azt-references azt-article-wrapper azt-reveal">
-          <h3>Referências Científicas Citadas</h3>
-          <ul className="azt-ref-list">
-            <li><span className="azt-ref-num">[1]</span> Moreno-Luna R. et al. — "Olive Oil Polyphenols Decrease Blood Pressure and Improve Endothelial Function in Young Women with Mild Hypertension." American Journal of Hypertension, Vol. 25(12), 2012.</li>
-            <li><span className="azt-ref-num">[2]</span> Beauchamp G.K. et al. — "Phytochemistry: Ibuprofen-like activity in extra-virgin olive oil." Nature, Vol. 437, Set. 2005.</li>
-            <li><span className="azt-ref-num">[3]</span> Bozzetto L. et al. — "Extra-Virgin Olive Oil Reduces Glycemic Response to a High–Glycemic Index Meal in Patients With Type 1 Diabetes." Diabetes Care, Vol. 39(4), 2016.</li>
-            <li><span className="azt-ref-num">[4]</span> Abuznait A.H. et al. — "Olive-oil-derived oleocanthal enhances β-amyloid clearance as a potential neuroprotective mechanism against Alzheimer's disease." ACS Chemical Neuroscience, 2013.</li>
-            <li><span className="azt-ref-num">[5]</span> Millman J.F. et al. — "Extra-virgin olive oil and the gut-brain axis: influence on gut microbiota, mucosal immunity, and cardiometabolic and cognitive health." Nutrition Reviews, Vol. 79(12), 2021.</li>
-            <li><span className="azt-ref-num">[6]</span> Filip R. et al. — "Twelve-month consumption of a polyphenol extract from olive in a double blind, randomized trial increases serum total osteocalcin levels." J. Nutrition, Health &amp; Aging, 2015.</li>
-            <li><span className="azt-ref-num">[7]</span> Storniolo C.E. et al. — "Polyphenol fraction of extra virgin olive oil protects against endothelial dysfunction induced by high glucose and free fatty acids." Redox Biology, Vol. 2, 2014.</li>
-            <li><span className="azt-ref-num">[8]</span> Fernández-Real J.M. et al. — "A Mediterranean Diet Enriched with Olive Oil Is Associated with Higher Serum Total Osteocalcin Levels in Elderly Men." J. Clin. Endocrinol. Metab., 2012.</li>
-            <li><span className="azt-ref-num">[9]</span> Alkhalifa A.E. et al. — "Extra-Virgin Olive Oil in Alzheimer's Disease: A Comprehensive Review." Int. J. Mol. Sci., 2024.</li>
-            <li><span className="azt-ref-num">[10]</span> Luisi M.L.E. et al. — "Post-prandial effects of high-polyphenolic extra virgin olive oil on endothelial function in adults at risk for type 2 diabetes." Int. J. Cardiol., 2021.</li>
-            <li><span className="azt-ref-num">[11]</span> Jiménez-Sánchez A. et al. — "Extra virgin olive oil diet intervention improves insulin resistance and islet performance in diet-induced diabetes in mice." Scientific Reports, 2019.</li>
-            <li><span className="azt-ref-num">[12]</span> Oliveira A. et al. — "Unraveling the Extra Virgin Olive Oil Effect on Inflammation and on Gut and Saliva Microbiota." Biomolecules, 2025.</li>
-            <li><span className="azt-ref-num">[13]</span> Andújar-Tenorio N. et al. — "Intestinal microbiota modulation at the strain level by the olive oil polyphenols in the diet." Frontiers in Nutrition, 2023.</li>
-            <li><span className="azt-ref-num">[14]</span> García-Gavilán J.F. et al. — "Extra virgin olive oil consumption reduces the risk of osteoporotic fractures in the PREDIMED trial." Clinical Nutrition, 2018.</li>
-            <li><span className="azt-ref-num">[15]</span> Revisão Sistemática — "Exploring the Benefits of Extra Virgin Olive Oil on Cardiovascular Health Enhancement and Disease Prevention." PMC, 2025.</li>
-          </ul>
-        </section>
 
       </main>
 
