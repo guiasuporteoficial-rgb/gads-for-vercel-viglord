@@ -33,7 +33,7 @@ export function useTrackingParams() {
     }
   }, [search]);
 
-  // Intercept clicks on external links and append tracking params
+  // Intercept clicks on ALL links and append tracking params to URL
   useEffect(() => {
     const handler = (e: MouseEvent) => {
       const anchor = (e.target as HTMLElement).closest('a');
@@ -42,22 +42,25 @@ export function useTrackingParams() {
       const href = anchor.getAttribute('href');
       if (!href) return;
 
-      // Only process absolute URLs to other domains
+      const params = getTrackingParams();
+      if (Object.keys(params).length === 0) return;
+
       try {
         const url = new URL(href, window.location.origin);
-        if (url.origin === window.location.origin) return;
 
-        const params = getTrackingParams();
-        if (Object.keys(params).length === 0) return;
-
-        // Append tracking params to the external URL
+        // Append tracking params
         Object.entries(params).forEach(([key, value]) => {
           if (!url.searchParams.has(key)) {
             url.searchParams.set(key, value);
           }
         });
 
-        anchor.setAttribute('href', url.toString());
+        // For internal links, update href so React Router picks up the params
+        if (url.origin === window.location.origin) {
+          anchor.setAttribute('href', url.pathname + url.search + url.hash);
+        } else {
+          anchor.setAttribute('href', url.toString());
+        }
       } catch {
         // Not a valid URL, skip
       }
