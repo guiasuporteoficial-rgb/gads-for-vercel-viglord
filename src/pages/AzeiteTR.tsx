@@ -1,4 +1,8 @@
 import { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
+import { BookOpen, Instagram, Facebook, Twitter, Youtube, Shield, Lock, Award, Heart, ShoppingBag, Search } from 'lucide-react';
+import { useStore } from '@/stores/useStore';
+import { categories } from '@/data/categories';
 
 const AzeiteTR = () => {
   const articleRef = useRef<HTMLDivElement>(null);
