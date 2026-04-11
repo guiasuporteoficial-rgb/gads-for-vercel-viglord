@@ -73,7 +73,6 @@ const AzeiteTR = () => {
           padding: 0.45rem 1.4rem;
           border-radius: 100px;
           margin-bottom: 2.5rem;
-          animation: aztFadeDown 1s ease-out 0.2s both;
         }
         .azt-hero h1 {
           font-family: 'Playfair Display', Georgia, serif;
@@ -83,7 +82,6 @@ const AzeiteTR = () => {
           color: #F5F0E8;
           letter-spacing: -0.02em;
           margin-bottom: 1.8rem;
-          animation: aztFadeUp 1.1s ease-out 0.4s both;
         }
         .azt-hero h1 em {
           font-style: italic;
@@ -96,14 +94,12 @@ const AzeiteTR = () => {
           color: rgba(245,240,232,0.72);
           max-width: 600px;
           margin: 0 auto 3rem;
-          animation: aztFadeUp 1.1s ease-out 0.6s both;
         }
         .azt-hero-meta {
           font-family: 'DM Sans', sans-serif;
           font-size: 0.75rem;
           color: rgba(245,240,232,0.4);
           letter-spacing: 0.04em;
-          animation: aztFadeUp 1s ease-out 0.8s both;
         }
         .azt-hero-scroll {
           position: absolute;
@@ -120,13 +116,11 @@ const AzeiteTR = () => {
           letter-spacing: 0.15em;
           text-transform: uppercase;
           cursor: pointer;
-          animation: aztFadeUp 1s ease-out 1s both;
         }
         .azt-hero-scroll .azt-line {
           width: 1px;
           height: 40px;
           background: linear-gradient(to bottom, rgba(212,168,67,0.5), transparent);
-          animation: aztScrollPulse 2s ease-in-out infinite;
         }
 
         .azt-article-wrapper {
@@ -458,7 +452,6 @@ const AzeiteTR = () => {
           text-decoration: none;
           transition: all 0.3s ease;
           box-shadow: 0 8px 30px rgba(184,134,11,0.3);
-          animation: aztFadeUp 1.1s ease-out 0.8s both;
         }
         .azt-cta-btn:hover {
           transform: translateY(-2px);
