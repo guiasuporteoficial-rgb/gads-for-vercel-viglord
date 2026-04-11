@@ -29,6 +29,7 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
+// Captures UTM/tracking params and decorates external links
 const TrackingCapture = () => {
   useTrackingParams();
   return null;
