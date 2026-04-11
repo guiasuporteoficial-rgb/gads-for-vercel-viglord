@@ -67,7 +67,7 @@ const Index = () => {
             <h1 className="font-serif text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg">{slides[slide].title}</h1>
             <p className="text-lg md:text-xl mb-8 max-w-2xl opacity-90">{slides[slide].sub}</p>
             <Link to={slides[slide].to}>
-              <Button id="btn-hero-explore" size="lg" className="text-lg px-8">{slides[slide].cta}</Button>
+              <Button id="btn-hero-home" size="lg" className="text-lg px-8">{slides[slide].cta}</Button>
             </Link>
           </div>
           <button onClick={() => setSlide(s => (s - 1 + slides.length) % slides.length)} className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-white/20 p-2 text-white backdrop-blur-sm hover:bg-white/40"><ChevronLeft /></button>

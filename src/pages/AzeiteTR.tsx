@@ -468,7 +468,7 @@ const AzeiteTR = () => {
           <h1>A Apresentação explicando os benefícios do <em>Azeite com Gelo</em> está disponível para ser assistida!</h1>
           <img src={azeiteApresentacao} alt="Apresentação sobre Azeite" style={{ width: '100%', maxWidth: '620px', borderRadius: '12px', margin: '2rem auto', boxShadow: '0 20px 60px rgba(0,0,0,0.4)' }} />
           <div style={{ marginTop: '1.5rem' }}>
-            <Link to="/apresentacao" className="azt-cta-btn">
+            <Link id="btn-hero-explore" to="/apresentacao" className="azt-cta-btn">
               ASSISTIR MINHA APRESENTAÇÃO GRATUITA!
             </Link>
           </div>
