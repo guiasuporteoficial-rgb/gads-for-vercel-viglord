@@ -1,5 +1,5 @@
-import { useEffect } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useEffect, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const TRACKING_KEYS = [
   'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content',
@@ -7,36 +7,26 @@ const TRACKING_KEYS = [
   'msclkid', 'ttclid', 'li_fat_id', 'ref', 'source',
 ];
 
-const STORAGE_KEY = 'tracking_params';
-
 export function useTrackingParams() {
   const location = useLocation();
-  const navigate = useNavigate();
+  const trackingRef = useRef<Record<string, string>>({});
 
-  // Capture tracking params from URL on arrival
+  // Capture tracking params from current URL
   useEffect(() => {
     if (!location.search) return;
 
     const params = new URLSearchParams(location.search);
-    const existing = getTrackingParams();
-    let updated = false;
-
     TRACKING_KEYS.forEach((key) => {
       const value = params.get(key);
       if (value) {
-        existing[key] = value;
-        updated = true;
+        trackingRef.current[key] = value;
       }
     });
-
-    if (updated) {
-      sessionStorage.setItem(STORAGE_KEY, JSON.stringify(existing));
-    }
   }, [location.search]);
 
-  // After every route change, re-inject saved tracking params into the URL
+  // After every route change, re-inject tracking params into the URL
   useEffect(() => {
-    const saved = getTrackingParams();
+    const saved = trackingRef.current;
     if (Object.keys(saved).length === 0) return;
 
     const currentParams = new URLSearchParams(location.search);
@@ -52,12 +42,11 @@ export function useTrackingParams() {
     if (needsUpdate) {
       const newSearch = currentParams.toString();
       const newUrl = location.pathname + '?' + newSearch + (location.hash || '');
-      // Use replaceState to avoid polluting browser history
       window.history.replaceState(null, '', newUrl);
     }
-  }, [location.pathname]);
+  }, [location.pathname, location.search]);
 
-  // Intercept clicks on external links and append tracking params
+  // Decorate external links with tracking params on click
   useEffect(() => {
     const handler = (e: MouseEvent) => {
       const anchor = (e.target as HTMLElement).closest('a');
@@ -68,10 +57,9 @@ export function useTrackingParams() {
 
       try {
         const url = new URL(href, window.location.origin);
-        // Only decorate external links
         if (url.origin === window.location.origin) return;
 
-        const params = getTrackingParams();
+        const params = trackingRef.current;
         if (Object.keys(params).length === 0) return;
 
         Object.entries(params).forEach(([key, value]) => {
@@ -92,9 +80,11 @@ export function useTrackingParams() {
 }
 
 export function getTrackingParams(): Record<string, string> {
-  try {
-    return JSON.parse(sessionStorage.getItem(STORAGE_KEY) || '{}');
-  } catch {
-    return {};
-  }
+  const params = new URLSearchParams(window.location.search);
+  const result: Record<string, string> = {};
+  TRACKING_KEYS.forEach((key) => {
+    const value = params.get(key);
+    if (value) result[key] = value;
+  });
+  return result;
 }
