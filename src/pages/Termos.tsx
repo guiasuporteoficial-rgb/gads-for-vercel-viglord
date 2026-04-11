@@ -27,7 +27,7 @@ const Termos = () => {
       <p>Realizamos entregas para todo o Brasil via Sedex e PAC dos Correios. Os prazos começam a contar após a confirmação do pagamento. Prazos são estimativas e podem sofrer alterações. Frete grátis para compras acima de R$ 149,90 (via PAC).</p>
 
       <h2>7. Propriedade Intelectual</h2>
-      <p>Todo o conteúdo do site (textos, imagens, layout, código) é de propriedade da Livraria Página Viva ou de seus licenciadores. É proibida a reprodução, distribuição ou modificação sem autorização prévia por escrito.</p>
+      <p>Todo o conteúdo do site (textos, imagens, layout, código) é de propriedade da DROPIX EDITORA ou de seus licenciadores. É proibida a reprodução, distribuição ou modificação sem autorização prévia por escrito.</p>
 
       <h2>8. Responsabilidades do Usuário</h2>
       <p>Você se compromete a: usar o site de forma lícita, não tentar acessar áreas restritas, não realizar engenharia reversa do site, não utilizar robôs ou scrapers, fornecer informações verdadeiras.</p>

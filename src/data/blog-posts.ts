@@ -7,7 +7,7 @@ export const blogPosts: BlogPost[] = [
     title: '10 Livros que Todo Empreendedor Deveria Ler em 2026',
     category: 'Negócios',
     date: '15 de março de 2026',
-    author: 'Equipe Página Viva',
+    author: 'Equipe DROPIX EDITORA',
     summary: 'Selecionamos os títulos essenciais para quem quer transformar ideias em negócios de sucesso.',
     imageColor: '#1A237E',
     content: `O empreendedorismo em 2026 exige mais do que coragem — exige conhecimento atualizado, visão estratégica e capacidade de adaptação. O cenário de negócios mudou drasticamente nos últimos anos, e os livros continuam sendo a ferramenta mais acessível e poderosa para quem quer se preparar.
@@ -63,7 +63,7 @@ O maior inimigo da leitura não é a falta de tempo — é a falta de prioridade
 
 **Como escolher o próximo livro**
 
-Não force gêneros que não te atraem. Comece pelo que te dá prazer. Peça recomendações a amigos, leia resenhas e explore listas curadas. Na Página Viva, nossa equipe de curadores pode te ajudar a encontrar o livro perfeito.
+Não force gêneros que não te atraem. Comece pelo que te dá prazer. Peça recomendações a amigos, leia resenhas e explore listas curadas. Na DROPIX EDITORA, nossa equipe de curadores pode te ajudar a encontrar o livro perfeito.
 
 **Criando seu ritual de leitura**
 
@@ -133,7 +133,7 @@ Com orçamento limitado, aposte em livros de bolso, poesia ou contos. Na Página
     author: 'Maria Helena Rocha',
     summary: 'A autora do best-seller revela suas inspirações, processo criativo e próximos projetos.',
     imageColor: '#1565C0',
-    content: `Marina Castelo conquistou o Brasil com "O Algoritmo da Vida", um romance de ficção científica que já vendeu mais de 200 mil exemplares. Em entrevista exclusiva à Página Viva, ela revela os bastidores da criação.
+    content: `Marina Castelo conquistou o Brasil com "O Algoritmo da Vida", um romance de ficção científica que já vendeu mais de 200 mil exemplares. Em entrevista exclusiva à DROPIX EDITORA, ela revela os bastidores da criação.
 
 **PV: O que inspirou "O Algoritmo da Vida"?**
 Marina: Tudo começou com uma pergunta que não me saía da cabeça: e se a realidade fosse literalmente um programa de computador? Não como metáfora, mas como fato. A partir daí, criei a Sofia, uma programadora que descobre isso da pior forma possível.
@@ -156,7 +156,7 @@ Marina: "Neuromancer" do William Gibson. Li aos 14 e decidi que queria criar mun
 **PV: Como é sua rotina de escrita?**
 Marina: Acordo às 5h, café preto, e escrevo até as 9h. Sem internet, sem celular. Depois disso, sou uma pessoa normal.
 
-**PV: Uma mensagem para os leitores da Página Viva?**
+**PV: Uma mensagem para os leitores da DROPIX EDITORA?**
 Marina: Leiam com coragem. Leiam o que desafia, o que incomoda, o que faz pensar. Os melhores livros não confirmam o que você já sabe — eles destroem e reconstroem.`
   },
   {
