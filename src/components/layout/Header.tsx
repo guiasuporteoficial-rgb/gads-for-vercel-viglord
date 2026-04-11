@@ -9,6 +9,8 @@ import { useState } from 'react';
 
 const Header = () => {
   const navigate = useNavigate();
+  const { pathname } = useLocation();
+  const isBottom = pathname === '/azeitetr';
   const { cartCount, favorites, searchTerm, setSearchTerm, cart } = useStore();
   const count = cartCount();
   const favCount = favorites.length;
