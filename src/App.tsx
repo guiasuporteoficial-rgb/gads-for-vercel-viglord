@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import ScrollToTop from "@/components/ScrollToTop";
 import Layout from "@/components/layout/Layout";
+import { useTrackingParams } from "@/hooks/useTrackingParams";
 import Index from "./pages/Index";
 import Loja from "./pages/Loja";
 import Categoria from "./pages/Categoria";
@@ -28,12 +29,18 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
+const TrackingCapture = () => {
+  useTrackingParams();
+  return null;
+};
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <TrackingCapture />
         <ScrollToTop />
         <Layout>
           <Routes>
