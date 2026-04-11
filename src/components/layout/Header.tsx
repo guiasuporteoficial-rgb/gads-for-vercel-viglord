@@ -1,4 +1,4 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { BookOpen, Heart, Menu, Search, ShoppingBag, X } from 'lucide-react';
 import { useStore } from '@/stores/useStore';
 import { Button } from '@/components/ui/button';
