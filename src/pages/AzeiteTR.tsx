@@ -1,4 +1,3 @@
-import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import azeiteApresentacao from '@/assets/azeite-apresentacao.png';
 import { BookOpen, Instagram, Facebook, Twitter, Youtube, Shield, Lock, Award, Heart, ShoppingBag, Search } from 'lucide-react';
@@ -6,19 +5,6 @@ import { useStore } from '@/stores/useStore';
 import { categories } from '@/data/categories';
 
 const AzeiteTR = () => {
-  const articleRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (!articleRef.current) return;
-    const els = articleRef.current.querySelectorAll('.azt-reveal');
-    const observer = new IntersectionObserver(
-      (entries) => entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add('azt-visible'); }),
-      { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
-    );
-    els.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
-  }, []);
-
   const scrollTo = (id: string) => {
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -437,26 +423,12 @@ const AzeiteTR = () => {
         }
 
         .azt-reveal {
-          opacity: 0;
-          transform: translateY(18px);
-          transition: opacity 0.7s ease, transform 0.7s ease;
+          opacity: 1;
+          transform: none;
         }
         .azt-visible {
           opacity: 1;
-          transform: translateY(0);
-        }
-
-        @keyframes aztFadeUp {
-          from { opacity: 0; transform: translateY(20px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes aztFadeDown {
-          from { opacity: 0; transform: translateY(-10px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes aztScrollPulse {
-          0%, 100% { opacity: 0.3; transform: scaleY(1); }
-          50% { opacity: 0.7; transform: scaleY(1.2); }
+          transform: none;
         }
 
         @media (max-width: 768px) {
