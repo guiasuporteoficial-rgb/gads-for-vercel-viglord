@@ -473,6 +473,25 @@ const AzeiteTR = () => {
           .azt-hero h1 { font-size: 1.9rem; }
           .azt-toc ol li button { font-size: 0.82rem; }
         }
+        .azt-cta-btn {
+          display: inline-block;
+          font-family: 'DM Sans', sans-serif;
+          font-size: 1.05rem;
+          font-weight: 700;
+          letter-spacing: 0.04em;
+          color: #1E2818;
+          background: linear-gradient(135deg, var(--azt-gold-light), var(--azt-gold));
+          padding: 1rem 2.5rem;
+          border-radius: 8px;
+          text-decoration: none;
+          transition: all 0.3s ease;
+          box-shadow: 0 8px 30px rgba(184,134,11,0.3);
+          animation: aztFadeUp 1.1s ease-out 0.8s both;
+        }
+        .azt-cta-btn:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 12px 40px rgba(184,134,11,0.45);
+        }
       `}</style>
 
       <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,500;1,8..60,300;1,8..60,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet" />
