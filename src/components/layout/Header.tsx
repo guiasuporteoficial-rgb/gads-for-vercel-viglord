@@ -35,7 +35,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="sticky top-0 z-50">
+    <header className={isBottom ? 'z-50' : 'sticky top-0 z-50'}>
       {/* Top Bar */}
       <div className="bg-brown text-brown-foreground">
         <div className="container flex items-center justify-between py-1.5 text-xs">
