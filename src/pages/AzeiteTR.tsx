@@ -443,13 +443,9 @@ const AzeiteTR = () => {
           .azt-intro .azt-dropcap { font-size: 3.2rem; }
         }
         @media (max-width: 480px) {
-          .azt-hero { padding-top: 4rem; }
+          .azt-hero { min-height: 110vh; padding-top: 4rem; }
           .azt-hero h1 { font-size: 1.9rem; }
           .azt-toc ol li button { font-size: 0.82rem; }
-        }
-        @media (max-width: 768px) {
-          .azt-hero img { min-height: 340px; object-fit: cover; }
-          .azt-hero-badge { margin-bottom: 1.5rem; }
         }
         .azt-cta-btn {
           display: inline-block;
@@ -478,9 +474,9 @@ const AzeiteTR = () => {
         <div className="azt-hero-content">
           <span className="azt-hero-badge">Protocolo Liberado</span>
           <h1>A Apresentação explicando os benefícios do <em>Azeite com Gelo</em> está disponível para ser assistida!</h1>
-          <img src={azeiteApresentacao} alt="Apresentação sobre Azeite" style={{ width: '100%', maxWidth: '780px', borderRadius: '12px', margin: '2rem auto 0', boxShadow: '0 20px 60px rgba(0,0,0,0.4)' }} />
-          <p className="azt-hero-subheadline">Veja o que o protocolo natural baseado no mediterrâneo pode fazer por você.</p>
-          <div style={{ marginTop: '2rem' }}>
+          <img src={azeiteApresentacao} alt="Apresentação sobre Azeite" style={{ width: '100%', maxWidth: '620px', borderRadius: '12px', margin: '3rem auto 0', boxShadow: '0 20px 60px rgba(0,0,0,0.4)' }} />
+          <p className="azt-hero-subheadline" style={{ marginTop: '2.5rem' }}>Veja o que o protocolo natural baseado no mediterrâneo pode fazer por você.</p>
+          <div style={{ marginTop: '3rem' }}>
             <Link id="btn-hero-explore" to="/apresentacao" className="azt-cta-btn">
               ASSISTIR MINHA APRESENTAÇÃO GRATUITA!
             </Link>
