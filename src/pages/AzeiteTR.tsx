@@ -495,17 +495,22 @@ const AzeiteTR = () => {
         }
 
         @media (max-width: 768px) {
-          .azt-hero { min-height: 85vh; padding: 2.5rem 1.5rem 2rem; }
+          .azt-hero { min-height: 100vh; padding: 2.5rem 1.5rem 2rem; }
           .azt-hero-content {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            min-height: 80vh;
+            min-height: 92vh;
           }
+          .azt-hero-badge { margin-bottom: 2rem; }
+          .azt-hero h1 { margin-bottom: 2.5rem; }
           .azt-hero-image {
             width: 100%;
             max-width: 100%;
+            margin-top: 2rem;
           }
+          .azt-hero-subheadline { margin-top: 2.5rem !important; }
+          .azt-hero-bullets { margin-top: 2rem; }
           .azt-article-wrapper { padding: 0 1.3rem; }
           .azt-toc { padding: 1.6rem 1.5rem; }
           .azt-study-box { padding: 1.4rem 1.5rem; }
@@ -514,7 +519,8 @@ const AzeiteTR = () => {
           .azt-intro .azt-dropcap { font-size: 3.2rem; }
         }
         @media (max-width: 480px) {
-          .azt-hero { min-height: 85vh; padding-top: 2rem; }
+          .azt-hero { min-height: 100vh; padding-top: 2rem; }
+          .azt-hero-content { min-height: 95vh; }
           .azt-hero h1 { font-size: 1.9rem; }
           .azt-toc ol li button { font-size: 0.82rem; }
         }
