@@ -1168,9 +1168,14 @@ const AzeiteTR = () => {
           </div>
         </div>
 
+        {/* Aviso Legal */}
+        <div style={{ padding: '24px 20px 0', maxWidth: 800, margin: '0 auto', fontSize: '0.7rem', color: '#a0a0a0', lineHeight: 1.5, textAlign: 'center' }}>
+          Aviso Legal: As informações contidas neste site são apenas para fins informativos e educativos. Este conteúdo não se destina a substituir o conselho, diagnóstico ou tratamento médico profissional. Sempre procure o conselho de seu médico ou outro profissional de saúde qualificado.
+        </div>
+
         {/* Bottom Bar */}
         <div className="azt-cf-bottom">
-          © 2026 DROPIX EDITORA. Todos os direitos reservados. CNPJ: 12.345.678/0001-90
+          © 2026 DROPIX EDITORA. Todos os direitos reservados. CNPJ: 65.255.590/0001-49
         </div>
       </footer>
     </div>
