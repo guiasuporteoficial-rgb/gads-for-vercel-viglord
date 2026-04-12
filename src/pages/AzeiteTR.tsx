@@ -443,9 +443,13 @@ const AzeiteTR = () => {
           .azt-intro .azt-dropcap { font-size: 3.2rem; }
         }
         @media (max-width: 480px) {
-          .azt-hero { min-height: 110vh; padding-top: 4rem; }
+          .azt-hero { padding-top: 4rem; }
           .azt-hero h1 { font-size: 1.9rem; }
           .azt-toc ol li button { font-size: 0.82rem; }
+        }
+        @media (max-width: 768px) {
+          .azt-hero img { min-height: 280px; object-fit: cover; }
+          .azt-hero-badge { margin-bottom: 1.5rem; }
         }
         .azt-cta-btn {
           display: inline-block;
