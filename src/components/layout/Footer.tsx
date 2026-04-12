@@ -64,7 +64,7 @@ const Footer = () => (
     </div>
     <div className="bg-brown text-brown-foreground">
       <div className="container py-3 text-center text-xs">
-        © 2026 DROPIX EDITORA. Todos os direitos reservados. CNPJ: 12.345.678/0001-90
+        © 2026 DROPIX EDITORA. Todos os direitos reservados. CNPJ: © 2026 DROPIX EDITORA. Todos os direitos reservados. CNPJ: 65.255.590/0001-49
       </div>
     </div>
   </footer>
