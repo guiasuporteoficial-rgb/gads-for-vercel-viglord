@@ -38,13 +38,13 @@ const AzeiteTR = () => {
 
         .azt-hero {
           position: relative;
-          min-height: 100vh;
+          min-height: 115vh;
           display: flex;
           align-items: flex-start;
           justify-content: center;
           background: linear-gradient(165deg, #3D4A2A 0%, #2A3520 35%, #1E2818 70%, #151C10 100%);
           overflow: hidden;
-          padding: 5rem 2rem 4rem;
+          padding: 6rem 2rem 5rem;
         }
         .azt-hero-subheadline {
           font-family: 'DM Sans', sans-serif;
