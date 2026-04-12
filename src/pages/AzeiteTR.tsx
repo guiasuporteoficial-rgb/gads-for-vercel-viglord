@@ -36,6 +36,39 @@ const AzeiteTR = () => {
           -webkit-font-smoothing: antialiased;
         }
 
+        .azt-editorial-header {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 1.5rem;
+          background: #1E2818;
+          border-bottom: 1px solid rgba(245,240,232,0.08);
+          padding: 0.9rem 1.5rem;
+          font-family: 'DM Sans', sans-serif;
+          font-size: 0.75rem;
+          font-weight: 500;
+          letter-spacing: 0.06em;
+          color: rgba(245,240,232,0.45);
+        }
+        .azt-editorial-header .azt-eh-brand {
+          color: rgba(212,168,67,0.8);
+          font-weight: 600;
+          display: flex;
+          align-items: center;
+          gap: 0.4rem;
+        }
+        .azt-editorial-header .azt-eh-sep {
+          width: 1px;
+          height: 14px;
+          background: rgba(245,240,232,0.12);
+        }
+        .azt-editorial-header span:not(.azt-eh-brand):not(.azt-eh-sep) {
+          transition: color 0.2s;
+        }
+        @media (max-width: 480px) {
+          .azt-editorial-header { gap: 0.8rem; font-size: 0.68rem; padding: 0.75rem 1rem; }
+        }
+
         .azt-hero {
           position: relative;
           display: flex;
@@ -43,7 +76,7 @@ const AzeiteTR = () => {
           justify-content: center;
           background: linear-gradient(165deg, #3D4A2A 0%, #2A3520 35%, #1E2818 70%, #151C10 100%);
           overflow: hidden;
-          padding: 8rem 2rem 5rem;
+          padding: 4rem 2rem 3rem;
         }
         .azt-hero-subheadline {
           font-family: 'DM Sans', sans-serif;
@@ -440,13 +473,38 @@ const AzeiteTR = () => {
           transform: none;
         }
 
+        .azt-hero-bullets {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+          margin-top: 1.2rem;
+        }
+        .azt-hero-bullets span {
+          font-family: 'DM Sans', sans-serif;
+          font-size: 0.85rem;
+          font-weight: 400;
+          color: rgba(245,240,232,0.55);
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+        }
+        .azt-hero-bullets .azt-check {
+          color: var(--azt-gold-light);
+          font-weight: 600;
+          font-size: 0.9rem;
+        }
+
         @media (max-width: 768px) {
-          .azt-hero { min-height: 100vh; padding: 3rem 1.5rem; }
+          .azt-hero { min-height: 85vh; padding: 2.5rem 1.5rem 2rem; }
+          .azt-hero-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 80vh;
+          }
           .azt-hero-image {
-            height: 85vh;
-            width: auto;
+            width: 100%;
             max-width: 100%;
-            object-fit: contain;
           }
           .azt-article-wrapper { padding: 0 1.3rem; }
           .azt-toc { padding: 1.6rem 1.5rem; }
@@ -482,14 +540,30 @@ const AzeiteTR = () => {
 
       <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,500;1,8..60,300;1,8..60,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet" />
 
+      {/* HEADER EDITORIAL */}
+      <div className="azt-editorial-header">
+        <span className="azt-eh-brand">🫒 Dropix Editora</span>
+        <span className="azt-eh-sep"></span>
+        <span>Protocolo Mediterrâneo</span>
+        <span className="azt-eh-sep"></span>
+        <span>Ciência</span>
+        <span className="azt-eh-sep"></span>
+        <span>Bem-Estar</span>
+      </div>
+
       {/* HERO */}
       <header className="azt-hero">
         <div className="azt-hero-content">
           <span className="azt-hero-badge">Protocolo Liberado</span>
           <h1>A Apresentação explicando os benefícios do <em>Azeite com Gelo</em> está disponível para ser assistida!</h1>
           <img src={azeiteApresentacao} alt="Apresentação sobre Azeite" className="azt-hero-image" />
-          <p className="azt-hero-subheadline" style={{ marginTop: '2.5rem' }}>Veja o que o protocolo natural baseado no mediterrâneo pode fazer por você.</p>
-          <div style={{ marginTop: '3rem' }}>
+          <p className="azt-hero-subheadline" style={{ marginTop: '1.5rem' }}>Veja o que o protocolo natural baseado no mediterrâneo pode fazer por você.</p>
+          <div className="azt-hero-bullets">
+            <span><span className="azt-check">✓</span> Baseado em estudos</span>
+            <span><span className="azt-check">✓</span> Protocolo 100% natural</span>
+            <span><span className="azt-check">✓</span> Apresentação gratuita</span>
+          </div>
+          <div style={{ marginTop: '2rem' }}>
             <Link id="btn-hero-explore" to="/apresentacao" className="azt-cta-btn">
               ASSISTIR MINHA APRESENTAÇÃO GRATUITA!
             </Link>
