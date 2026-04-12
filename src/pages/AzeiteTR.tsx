@@ -448,8 +448,8 @@ const AzeiteTR = () => {
           .azt-toc ol li button { font-size: 0.82rem; }
         }
         @media (max-width: 768px) {
+          .azt-hero img { min-height: 340px; object-fit: cover; }
           .azt-hero-badge { margin-bottom: 1.5rem; }
-          .azt-hero h1 { margin-bottom: 1rem; }
         }
         .azt-cta-btn {
           display: inline-block;
