@@ -69,6 +69,13 @@ const AzeiteTR = () => {
           max-width: 820px;
           text-align: center;
         }
+        .azt-hero-image {
+          width: 100%;
+          max-width: 620px;
+          border-radius: 12px;
+          margin: 3rem auto 0;
+          box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+        }
         .azt-hero-badge {
           display: inline-block;
           font-family: 'DM Sans', sans-serif;
@@ -434,7 +441,13 @@ const AzeiteTR = () => {
         }
 
         @media (max-width: 768px) {
-          .azt-hero { min-height: 75vh; padding: 3rem 1.5rem; }
+          .azt-hero { min-height: 100vh; padding: 3rem 1.5rem; }
+          .azt-hero-image {
+            height: 85vh;
+            width: auto;
+            max-width: 100%;
+            object-fit: contain;
+          }
           .azt-article-wrapper { padding: 0 1.3rem; }
           .azt-toc { padding: 1.6rem 1.5rem; }
           .azt-study-box { padding: 1.4rem 1.5rem; }
@@ -443,7 +456,7 @@ const AzeiteTR = () => {
           .azt-intro .azt-dropcap { font-size: 3.2rem; }
         }
         @media (max-width: 480px) {
-          .azt-hero { min-height: 110vh; padding-top: 4rem; }
+          .azt-hero { min-height: 100vh; padding-top: 4rem; }
           .azt-hero h1 { font-size: 1.9rem; }
           .azt-toc ol li button { font-size: 0.82rem; }
         }
@@ -474,7 +487,7 @@ const AzeiteTR = () => {
         <div className="azt-hero-content">
           <span className="azt-hero-badge">Protocolo Liberado</span>
           <h1>A Apresentação explicando os benefícios do <em>Azeite com Gelo</em> está disponível para ser assistida!</h1>
-          <img src={azeiteApresentacao} alt="Apresentação sobre Azeite" style={{ width: '100%', maxWidth: '620px', borderRadius: '12px', margin: '3rem auto 0', boxShadow: '0 20px 60px rgba(0,0,0,0.4)' }} />
+          <img src={azeiteApresentacao} alt="Apresentação sobre Azeite" className="azt-hero-image" />
           <p className="azt-hero-subheadline" style={{ marginTop: '2.5rem' }}>Veja o que o protocolo natural baseado no mediterrâneo pode fazer por você.</p>
           <div style={{ marginTop: '3rem' }}>
             <Link id="btn-hero-explore" to="/apresentacao" className="azt-cta-btn">
