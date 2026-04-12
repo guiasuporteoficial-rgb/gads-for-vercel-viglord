@@ -514,7 +514,7 @@ const AzeiteTR = () => {
           .azt-intro .azt-dropcap { font-size: 3.2rem; }
         }
         @media (max-width: 480px) {
-          .azt-hero { min-height: 100vh; padding-top: 4rem; }
+          .azt-hero { min-height: 85vh; padding-top: 2rem; }
           .azt-hero h1 { font-size: 1.9rem; }
           .azt-toc ol li button { font-size: 0.82rem; }
         }
