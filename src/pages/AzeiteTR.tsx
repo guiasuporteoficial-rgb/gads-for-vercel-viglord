@@ -38,13 +38,21 @@ const AzeiteTR = () => {
 
         .azt-hero {
           position: relative;
-          min-height: 85vh;
           display: flex;
-          align-items: center;
+          align-items: flex-start;
           justify-content: center;
           background: linear-gradient(165deg, #3D4A2A 0%, #2A3520 35%, #1E2818 70%, #151C10 100%);
           overflow: hidden;
-          padding: 4rem 2rem;
+          padding: 8rem 2rem 5rem;
+        }
+        .azt-hero-subheadline {
+          font-family: 'DM Sans', sans-serif;
+          font-size: 1rem;
+          font-weight: 400;
+          color: rgba(245,240,232,0.65);
+          max-width: 520px;
+          margin: 1rem auto 0;
+          line-height: 1.6;
         }
         .azt-hero::before {
           content: '';
@@ -435,7 +443,7 @@ const AzeiteTR = () => {
           .azt-intro .azt-dropcap { font-size: 3.2rem; }
         }
         @media (max-width: 480px) {
-          .azt-hero { min-height: 70vh; }
+          .azt-hero { min-height: 110vh; padding-top: 4rem; }
           .azt-hero h1 { font-size: 1.9rem; }
           .azt-toc ol li button { font-size: 0.82rem; }
         }
@@ -466,8 +474,9 @@ const AzeiteTR = () => {
         <div className="azt-hero-content">
           <span className="azt-hero-badge">Protocolo Liberado</span>
           <h1>A Apresentação explicando os benefícios do <em>Azeite com Gelo</em> está disponível para ser assistida!</h1>
-          <img src={azeiteApresentacao} alt="Apresentação sobre Azeite" style={{ width: '100%', maxWidth: '620px', borderRadius: '12px', margin: '2rem auto', boxShadow: '0 20px 60px rgba(0,0,0,0.4)' }} />
-          <div style={{ marginTop: '1.5rem' }}>
+          <img src={azeiteApresentacao} alt="Apresentação sobre Azeite" style={{ width: '100%', maxWidth: '620px', borderRadius: '12px', margin: '2rem auto 0', boxShadow: '0 20px 60px rgba(0,0,0,0.4)' }} />
+          <p className="azt-hero-subheadline">Veja o que o protocolo natural baseado no mediterrâneo pode fazer por você.</p>
+          <div style={{ marginTop: '2.5rem', paddingTop: '20vh' }}>
             <Link id="btn-hero-explore" to="/apresentacao" className="azt-cta-btn">
               ASSISTIR MINHA APRESENTAÇÃO GRATUITA!
             </Link>
