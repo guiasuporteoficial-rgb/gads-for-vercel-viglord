@@ -38,13 +38,22 @@ const AzeiteTR = () => {
 
         .azt-hero {
           position: relative;
-          min-height: 85vh;
+          min-height: 100vh;
           display: flex;
-          align-items: center;
+          align-items: flex-start;
           justify-content: center;
           background: linear-gradient(165deg, #3D4A2A 0%, #2A3520 35%, #1E2818 70%, #151C10 100%);
           overflow: hidden;
-          padding: 4rem 2rem;
+          padding: 5rem 2rem 4rem;
+        }
+        .azt-hero-subheadline {
+          font-family: 'DM Sans', sans-serif;
+          font-size: 1rem;
+          font-weight: 400;
+          color: rgba(245,240,232,0.65);
+          max-width: 520px;
+          margin: 1rem auto 0;
+          line-height: 1.6;
         }
         .azt-hero::before {
           content: '';
