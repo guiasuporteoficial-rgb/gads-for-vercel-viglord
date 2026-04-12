@@ -568,7 +568,9 @@ const AzeiteTR = () => {
             <span><span className="azt-check">✓</span> Baseado em estudos</span>
             <span><span className="azt-check">✓</span> Protocolo 100% natural</span>
             <span><span className="azt-check">✓</span> Apresentação gratuita</span>
+            <span><span className="azt-check">✓</span> Duração: apenas 8 minutos</span>
           </div>
+          <p className="azt-hero-meta" style={{ marginTop: '1.2rem' }}>Atualizado em abril de 2026</p>
           <div style={{ marginTop: '2rem' }}>
             <Link id="btn-hero-explore" to="/apresentacao" className="azt-cta-btn">
               ASSISTIR MINHA APRESENTAÇÃO GRATUITA!
