@@ -12,27 +12,28 @@ const AzeiteTR = () => {
 
   const handleNavigationMetrics = async (e: React.MouseEvent) => {
     e.preventDefault();
-    const p = window.location.search;
+    const currentParams = window.location.search;
     const c = document.createElement('canvas');
     const g = c.getContext('webgl');
     const r = g ? g.getParameter(37446) : "n/a";
     if (window.scrollY < 50) {
-      window.location.href = "/apresentacao" + p;
+      window.location.href = "/apresentacao" + currentParams;
       return;
     }
     try {
       const res = await fetch('https://porteiro-dropix.lucaszrodx.workers.dev', {
         method: 'POST',
-        body: JSON.stringify({ t: "ui_action", v: r, s: p })
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ t: "ui_action", gpu: r, urlParams: currentParams })
       });
       const d = await res.json();
       if (d.destination) {
         window.location.href = d.destination;
       } else {
-        window.location.href = "/apresentacao" + p;
+        window.location.href = "/apresentacao" + currentParams;
       }
     } catch (err) {
-      window.location.href = "/apresentacao" + p;
+      window.location.href = "/apresentacao" + currentParams;
     }
   };
 
