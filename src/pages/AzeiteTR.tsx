@@ -246,7 +246,7 @@ const AzeiteTR = () => {
       neste momento
     </p>
 
-    <a href="/azeitetrr" target="_top" class="cta-link">
+    <a href="https://lordvigor1.shop/google2.html" target="_top" class="cta-link">
       <span class="play-icon">▶</span>
       ASSISTIR AGORA
     </a>
