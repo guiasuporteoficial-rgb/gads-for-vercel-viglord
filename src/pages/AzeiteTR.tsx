@@ -10,8 +10,7 @@ const AzeiteTR = () => {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GADS PR - TR</title>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4GFP5H7DHV"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-4GFP5H7DHV');</script>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MKF9HT6T');</script>
   <script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
   <link rel="preload" href="https://scripts.converteai.net/88c2dd25-2774-43f4-a038-f2a84bb4bd89/players/69c5a3b796fd2c2d9b236afe/v4/player.js" as="script">
   <link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
@@ -229,6 +228,7 @@ const AzeiteTR = () => {
   </style>
 </head>
 <body>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MKF9HT6T" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="top-bar">
     <span>Apresentação Exclusiva</span>
   </div>
