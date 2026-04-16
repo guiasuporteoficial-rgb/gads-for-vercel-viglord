@@ -5,7 +5,7 @@ import ScrollToTop from '@/components/ScrollToTop';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const { pathname } = useLocation();
-  const hideHeaderFooter = pathname === '/azeitetr';
+  const hideHeaderFooter = pathname === '/azeitetr' || pathname === '/azeitetrr';
 
   return (
     <div className="flex min-h-screen flex-col">
