@@ -7,6 +7,8 @@ import { categories } from '@/data/categories';
 
 const AzeiteTRR = () => {
   useEffect(() => {
+    document.title = 'Beneficios do azeite';
+
     const script1 = document.createElement('script');
     script1.async = true;
     script1.src = 'https://www.googletagmanager.com/gtag/js?id=G-4GFP5H7DHV';
