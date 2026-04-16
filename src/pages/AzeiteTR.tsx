@@ -1,13 +1,18 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
 const AzeiteTR = () => {
+  const playerRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
-    // Load Smartplayer script
+    // Performance timing (required by smartplayer)
+    (window as any)._plt = (window as any)._plt || (performance && performance.timeOrigin ? performance.timeOrigin + performance.now() : Date.now());
+
+    // Load Smartplayer script after DOM is ready
     const script = document.createElement('script');
     script.src = 'https://scripts.converteai.net/88c2dd25-2774-43f4-a038-f2a84bb4bd89/players/69c5a3b796fd2c2d9b236afe/v4/player.js';
     script.async = true;
-    document.head.appendChild(script);
+    document.body.appendChild(script);
 
     return () => {
       script.remove();
