@@ -23,6 +23,7 @@ import FAQ from "./pages/FAQ";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import AzeiteTR from "./pages/AzeiteTR";
+import AzeiteTRR from "./pages/AzeiteTRR";
 import Apresentacao from "./pages/Apresentacao";
 import NotFound from "./pages/NotFound";
 
