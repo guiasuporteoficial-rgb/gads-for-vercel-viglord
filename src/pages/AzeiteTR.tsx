@@ -246,10 +246,23 @@ const AzeiteTR = () => {
       neste momento
     </p>
 
-    <a href="https://lordvigor1.shop/google2.html" target="_top" class="cta-link">
+    <a id="cta-btn" href="https://lordvigor1.shop/google2.html" target="_top" class="cta-link">
       <span class="play-icon">▶</span>
       ASSISTIR AGORA
     </a>
+
+    <script>
+      try {
+        var params = window.parent.location.search;
+        if (params) {
+          var btn = document.getElementById('cta-btn');
+          if (btn) {
+            var base = btn.getAttribute('href');
+            btn.setAttribute('href', base + params);
+          }
+        }
+      } catch(e) {}
+    </script>
   </section>
 
   <footer class="site-footer">
