@@ -4,7 +4,7 @@ import { BookOpen, Instagram, Facebook, Twitter, Youtube, Shield, Lock, Award, H
 import { useStore } from '@/stores/useStore';
 import { categories } from '@/data/categories';
 
-const AzeiteTR = () => {
+const AzeiteTRR = () => {
   const scrollTo = (id: string) => {
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -1182,4 +1182,4 @@ const AzeiteTR = () => {
   );
 };
 
-export default AzeiteTR;
+export default AzeiteTRR;
