@@ -9,9 +9,13 @@ const AzeiteTRR = () => {
   useEffect(() => {
     document.title = 'Beneficios do azeite';
 
-    // GTM
+    // GTM - initialize dataLayer and load gtm.js
+    (window as any).dataLayer = (window as any).dataLayer || [];
+    (window as any).dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+
     const gtmScript = document.createElement('script');
-    gtmScript.textContent = "(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MKF9HT6T');";
+    gtmScript.async = true;
+    gtmScript.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-MKF9HT6T';
     document.head.appendChild(gtmScript);
 
     // GTM noscript
