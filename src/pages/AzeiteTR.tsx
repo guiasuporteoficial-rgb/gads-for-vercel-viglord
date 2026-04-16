@@ -228,6 +228,7 @@ const AzeiteTR = () => {
   </style>
 </head>
 <body>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MKF9HT6T" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="top-bar">
     <span>Apresentação Exclusiva</span>
   </div>
